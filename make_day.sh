@@ -4,8 +4,8 @@ if [[ -z "${1+x}" ]]; then
 fi
 
 DIR="src/Day $1"
-mkdir "$DIR"
-cat << EOF > "$DIR/answer_$1_1.rs"
+mkdir -p "$DIR"
+cat > "$DIR/answer_$1_1.rs" << EOF
 use std::error::Error;
 use std::fs::File;
 use std::io::Read;
